@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t7B-mt-N17">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="0rr-NM-4Xa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="t7B-mt-N17" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aGL-DK-K5f">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="21l-cg-4VB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wT5-Gq-6qG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="155" y="-75"/>
+        </scene>
+        <!--Download Maps-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CountriesVC" customModule="OsmAndTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQz-KZ-Bc6">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="120.66666666666667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download Maps" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwR-QO-oyF">
+                                        <rect key="frame" x="8" y="72" width="374" height="40.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="NavViewColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="xwR-QO-oyF" secondAttribute="bottom" constant="8" id="X0T-KL-A6J"/>
+                                    <constraint firstAttribute="trailing" secondItem="xwR-QO-oyF" secondAttribute="trailing" constant="8" id="cif-6a-ZSJ"/>
+                                    <constraint firstItem="xwR-QO-oyF" firstAttribute="leading" secondItem="XQz-KZ-Bc6" secondAttribute="leading" constant="8" id="rHu-WN-1nE"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3gw-YI-eFR">
+                                <rect key="frame" x="0.0" y="120.66666666666669" width="390" height="57"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device memory" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaS-7S-38U">
+                                        <rect key="frame" x="8" y="7.9999999999999858" width="100.66666666666667" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free 3.61 GB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ox4-Ys-Dxx">
+                                        <rect key="frame" x="299.66666666666669" y="7.9999999999999858" width="82.333333333333314" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DBS-1Z-jBk" customClass="ProgressView" customModule="OsmAndTest" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="32.999999999999986" width="374" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="TBc-jN-52Z"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="background">
+                                                <color key="value" name="ProgressBack"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerradius">
+                                                <real key="value" value="7.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ox4-Ys-Dxx" secondAttribute="trailing" constant="8" id="4Ic-mR-AWC"/>
+                                    <constraint firstAttribute="trailing" secondItem="DBS-1Z-jBk" secondAttribute="trailing" constant="8" id="Mcp-eC-duC"/>
+                                    <constraint firstItem="DBS-1Z-jBk" firstAttribute="top" secondItem="Ox4-Ys-Dxx" secondAttribute="bottom" constant="8" id="MiF-v6-Jbm"/>
+                                    <constraint firstItem="yaS-7S-38U" firstAttribute="leading" secondItem="3gw-YI-eFR" secondAttribute="leading" constant="8" id="OyQ-mp-yTT"/>
+                                    <constraint firstItem="DBS-1Z-jBk" firstAttribute="leading" secondItem="3gw-YI-eFR" secondAttribute="leading" constant="8" id="PtQ-FD-9D5"/>
+                                    <constraint firstAttribute="bottom" secondItem="DBS-1Z-jBk" secondAttribute="bottom" constant="8" id="T4l-58-d6d"/>
+                                    <constraint firstItem="Ox4-Ys-Dxx" firstAttribute="top" secondItem="3gw-YI-eFR" secondAttribute="top" constant="8" id="ZVl-gy-WmF"/>
+                                    <constraint firstItem="yaS-7S-38U" firstAttribute="top" secondItem="3gw-YI-eFR" secondAttribute="top" constant="8" id="cda-nI-tmn"/>
+                                    <constraint firstItem="Ox4-Ys-Dxx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yaS-7S-38U" secondAttribute="trailing" constant="8" id="k77-lb-sCZ"/>
+                                    <constraint firstItem="DBS-1Z-jBk" firstAttribute="top" secondItem="yaS-7S-38U" secondAttribute="bottom" constant="8" id="oEd-fx-xj4"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="boY-EA-tAH">
+                                <rect key="frame" x="0.0" y="177.66666666666669" width="390" height="632.33333333333326"/>
+                                <color key="backgroundColor" name="ProgressBack"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="NKc-bu-Ui1">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Europe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ct-dr-ZIN">
+                                            <rect key="frame" x="15" y="15" width="367" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="0ct-dr-ZIN" firstAttribute="top" secondItem="NKc-bu-Ui1" secondAttribute="top" constant="15" id="HKe-v5-TiN"/>
+                                        <constraint firstAttribute="trailing" secondItem="0ct-dr-ZIN" secondAttribute="trailing" constant="8" id="OdI-hr-FPi"/>
+                                        <constraint firstItem="0ct-dr-ZIN" firstAttribute="leading" secondItem="NKc-bu-Ui1" secondAttribute="leading" constant="15" id="PNS-bY-eKG"/>
+                                        <constraint firstAttribute="bottom" secondItem="0ct-dr-ZIN" secondAttribute="bottom" constant="8" id="jLc-K4-YQo"/>
+                                    </constraints>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="ProgressBack"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="boY-EA-tAH" secondAttribute="bottom" id="79T-kl-rRI"/>
+                            <constraint firstItem="3gw-YI-eFR" firstAttribute="top" secondItem="XQz-KZ-Bc6" secondAttribute="bottom" id="CHG-fA-KgX"/>
+                            <constraint firstItem="XQz-KZ-Bc6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="I1u-d2-B4a"/>
+                            <constraint firstItem="boY-EA-tAH" firstAttribute="top" secondItem="3gw-YI-eFR" secondAttribute="bottom" id="KWC-rb-bRR"/>
+                            <constraint firstItem="boY-EA-tAH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qec-Ea-iRy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="boY-EA-tAH" secondAttribute="trailing" id="aMG-0v-Eeq"/>
+                            <constraint firstItem="3gw-YI-eFR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b91-in-XMh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3gw-YI-eFR" secondAttribute="trailing" id="hQb-ek-G7O"/>
+                            <constraint firstItem="XQz-KZ-Bc6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="npz-v3-nPy"/>
+                            <constraint firstItem="xwR-QO-oyF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="tXL-Ap-Efp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XQz-KZ-Bc6" secondAttribute="trailing" id="vhq-Vw-BX8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Download Maps" id="WZu-l7-HqN"/>
+                    <connections>
+                        <outlet property="countriesTableView" destination="boY-EA-tAH" id="MVU-oz-ZW8"/>
+                        <outlet property="freeMemory" destination="Ox4-Ys-Dxx" id="xIL-Lx-D8j"/>
+                        <outlet property="progressBar" destination="DBS-1Z-jBk" id="Ipo-Mu-gXM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197" y="-75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="NavViewColor">
+            <color red="0.94099998474121094" green="0.55699998140335083" blue="0.20800000429153442" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="ProgressBack">
+            <color red="0.94099998474121094" green="0.94099998474121094" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

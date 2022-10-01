@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--RegionsVC-->
+        <scene sceneID="Xzw-y1-xoI">
+            <objects>
+                <viewController storyboardIdentifier="RegionsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ona-RC-ESP" customClass="RegionsVC" customModule="OsmAndTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eso-qx-0YJ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cA-pJ-pW0">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="83.333333333333329"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Germany" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHx-Xs-tln">
+                                        <rect key="frame" x="160.33333333333334" y="55.000000000000007" width="69.333333333333343" height="20.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZO-z5-B6u">
+                                        <rect key="frame" x="8" y="55.333333333333343" width="40" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="4gb-7T-war"/>
+                                            <constraint firstAttribute="width" constant="40" id="56b-Zk-wBO"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="chevron.backward" catalog="system"/>
+                                        <connections>
+                                            <action selector="backTpd:" destination="Ona-RC-ESP" eventType="touchUpInside" id="69M-3E-3Lf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="NavViewColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iHx-Xs-tln" secondAttribute="trailing" constant="8" id="0sx-dC-BYT"/>
+                                    <constraint firstAttribute="bottom" secondItem="iHx-Xs-tln" secondAttribute="bottom" constant="8" id="B7y-nG-bKy"/>
+                                    <constraint firstItem="eZO-z5-B6u" firstAttribute="centerY" secondItem="iHx-Xs-tln" secondAttribute="centerY" id="Nr4-6r-OhG"/>
+                                    <constraint firstItem="iHx-Xs-tln" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eZO-z5-B6u" secondAttribute="trailing" constant="8" id="bOO-Av-HXx"/>
+                                    <constraint firstItem="eZO-z5-B6u" firstAttribute="leading" secondItem="6cA-pJ-pW0" secondAttribute="leading" constant="8" id="wUr-3F-vCH"/>
+                                    <constraint firstItem="iHx-Xs-tln" firstAttribute="centerX" secondItem="6cA-pJ-pW0" secondAttribute="centerX" id="y4T-mm-Wib"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="V60-wp-p8U">
+                                <rect key="frame" x="0.0" y="83.333333333333314" width="390" height="726.66666666666674"/>
+                                <color key="backgroundColor" name="ProgressBack"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="M9c-UF-Sgg">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Europe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggr-Gb-AEs">
+                                            <rect key="frame" x="15" y="15" width="367" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="ggr-Gb-AEs" firstAttribute="leading" secondItem="M9c-UF-Sgg" secondAttribute="leading" constant="15" id="DVu-F4-sQ9"/>
+                                        <constraint firstItem="ggr-Gb-AEs" firstAttribute="top" secondItem="M9c-UF-Sgg" secondAttribute="top" constant="15" id="HkI-et-Aeh"/>
+                                        <constraint firstAttribute="trailing" secondItem="ggr-Gb-AEs" secondAttribute="trailing" constant="8" id="Ihz-Zb-8sm"/>
+                                        <constraint firstAttribute="bottom" secondItem="ggr-Gb-AEs" secondAttribute="bottom" constant="8" id="kLz-ew-WQs"/>
+                                    </constraints>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XOa-qF-lVE"/>
+                        <color key="backgroundColor" name="ProgressBack"/>
+                        <constraints>
+                            <constraint firstItem="XOa-qF-lVE" firstAttribute="trailing" secondItem="6cA-pJ-pW0" secondAttribute="trailing" id="GNA-gd-Jst"/>
+                            <constraint firstItem="V60-wp-p8U" firstAttribute="trailing" secondItem="XOa-qF-lVE" secondAttribute="trailing" id="Jng-Or-7QR"/>
+                            <constraint firstItem="XOa-qF-lVE" firstAttribute="bottom" secondItem="V60-wp-p8U" secondAttribute="bottom" id="LbK-nP-jhr"/>
+                            <constraint firstItem="iHx-Xs-tln" firstAttribute="top" secondItem="XOa-qF-lVE" secondAttribute="top" constant="8" id="aqU-r1-FCc"/>
+                            <constraint firstItem="V60-wp-p8U" firstAttribute="leading" secondItem="XOa-qF-lVE" secondAttribute="leading" id="cA2-fS-o3y"/>
+                            <constraint firstItem="6cA-pJ-pW0" firstAttribute="top" secondItem="Eso-qx-0YJ" secondAttribute="top" id="i3O-TO-CDv"/>
+                            <constraint firstItem="V60-wp-p8U" firstAttribute="top" secondItem="6cA-pJ-pW0" secondAttribute="bottom" id="ncT-ky-Yes"/>
+                            <constraint firstItem="6cA-pJ-pW0" firstAttribute="leading" secondItem="XOa-qF-lVE" secondAttribute="leading" id="v8m-gC-ein"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navTitle" destination="iHx-Xs-tln" id="juN-Pv-ZSv"/>
+                        <outlet property="regionTableView" destination="V60-wp-p8U" id="SUl-2p-43F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lsf-f2-JHb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1953.8461538461538" y="-74.644549763033169"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <namedColor name="NavViewColor">
+            <color red="0.94099998474121094" green="0.55699998140335083" blue="0.20800000429153442" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="ProgressBack">
+            <color red="0.94099998474121094" green="0.94099998474121094" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
