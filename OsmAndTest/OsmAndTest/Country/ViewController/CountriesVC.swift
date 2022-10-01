@@ -94,8 +94,13 @@ extension CountriesVC: UITableViewDataSource, UITableViewDelegate{
 extension CountriesVC: UpdateProgress{
     func didUpdateProgrress(progress: [String : Float]) {
         self.progressDict = progress
+        let indexes = self.vm.getIndex(countriesData: self.countriesData, myData: self.myData, progress: progress)
         DispatchQueue.main.async {
-            self.countriesTableView.reloadData()
+            indexes.forEach { item in
+                if let cell = self.countriesTableView.cellForRow(at: IndexPath(row: item.0, section: 0)) as? CountriesMapCell{
+                    cell.updateProgress(progress: progress[item.1]!)
+                }
+            }
         }
     }
     

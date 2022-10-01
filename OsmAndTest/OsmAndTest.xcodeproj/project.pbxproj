@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12868BD928E8A63000CB4191 /* RegionsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12868BD828E8A63000CB4191 /* RegionsVM.swift */; };
 		128C85A928E89AE7003B4247 /* RegionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128C858E28E89AE6003B4247 /* RegionsVC.swift */; };
 		128C85AA28E89AE7003B4247 /* Region.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 128C858F28E89AE6003B4247 /* Region.storyboard */; };
 		128C85AB28E89AE7003B4247 /* CoutriesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128C859228E89AE6003B4247 /* CoutriesVM.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12868BD828E8A63000CB4191 /* RegionsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionsVM.swift; sourceTree = "<group>"; };
 		128C857528E89AC4003B4247 /* OsmAndTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OsmAndTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		128C858628E89AC4003B4247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		128C858E28E89AE6003B4247 /* RegionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionsVC.swift; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12868BD728E8A62000CB4191 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				12868BD828E8A63000CB4191 /* RegionsVM.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		128C856C28E89AC4003B4247 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +100,7 @@
 		128C858C28E89AE6003B4247 /* Regions */ = {
 			isa = PBXGroup;
 			children = (
+				12868BD728E8A62000CB4191 /* View Model */,
 				128C858D28E89AE6003B4247 /* View Controller */,
 			);
 			path = Regions;
@@ -275,6 +286,7 @@
 				128C85B728E89AE7003B4247 /* DownloadManager.swift in Sources */,
 				128C85B828E89AE7003B4247 /* SceneDelegate.swift in Sources */,
 				128C85B128E89AE7003B4247 /* JSONModel.swift in Sources */,
+				12868BD928E8A63000CB4191 /* RegionsVM.swift in Sources */,
 				128C85A928E89AE7003B4247 /* RegionsVC.swift in Sources */,
 				128C85B228E89AE7003B4247 /* ProgressView.swift in Sources */,
 			);

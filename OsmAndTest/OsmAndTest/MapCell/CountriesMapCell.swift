@@ -69,4 +69,8 @@ class CountriesMapCell: UITableViewCell {
             progressBar.progress = progress!
         }
     }
+    func updateProgress(progress: Float){
+        progressBar.isHidden = false
+        progressBar.progress = progress
+    }
 }

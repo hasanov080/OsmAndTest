@@ -9,6 +9,7 @@ import UIKit
 
 class RegionsVC: UIViewController {
 
+    lazy var vm = RegionsVM()
    
     @IBAction func backTpd(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
@@ -40,16 +41,6 @@ class RegionsVC: UIViewController {
         downloadManager.delegate = self
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 extension RegionsVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,17 +58,22 @@ extension RegionsVC: UITableViewDelegate, UITableViewDataSource{
         if progress[id] == nil && regions?.region?[indexPath.row].region == nil{
             downloadManager.submitToQueue(id: id)
         }else{
-            
+//            Further Maps List
         }
-//        if progress
     }
     
 }
 extension RegionsVC: UpdateProgress{
     func didUpdateProgrress(progress: [String : Float]) {
         self.progress = progress
+        let indexes = vm.getSpecificID(regions: self.regions, progress: progress, suffix: self.suffix)
         DispatchQueue.main.async {
-            self.regionTableView.reloadData()
+            indexes.forEach { index in
+                if let cell = self.regionTableView.cellForRow(at: IndexPath(row: index.0, section: 0)) as? CountriesMapCell{
+                    cell.updateProgress(progress: progress[index.1]!)
+                }
+            }
+            
         }
     }
 }

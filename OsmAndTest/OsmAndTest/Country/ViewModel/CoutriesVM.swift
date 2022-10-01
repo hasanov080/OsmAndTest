@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 class CoutriesVM: NSObject{
     private let xmlPath = Bundle.main.path(forResource: "JSON", ofType: "json")
-   
+    private let downloadManager = DownloadManager.shared
     
     func getJsonData(complition: @escaping ((Countries?) -> Void)){
         let data = convertXmlToData()
@@ -33,6 +33,22 @@ class CoutriesVM: NSObject{
     }
     
     
+    func getIndex(countriesData: [Region], myData: Countries?, progress: [String: Float]) -> [(Int, String)]{
+        var indexes = [(Int, String)]()
+        progress.keys.forEach { id in
+            let index = countriesData.firstIndex(where: { region in
+                let suffix = myData?.first(where: { element in
+                    return element.type == "continent"
+                })
+                let localID = self.downloadManager.generateSpecificID(name: region.name, suffix: suffix?.name ?? "-")
+                return localID == id
+            }) ?? -1
+            if index != -1{
+                indexes.append((index, id))
+            }
+        }
+        return indexes
+    }
     
     
     private func convertXmlToData() -> Data?{
